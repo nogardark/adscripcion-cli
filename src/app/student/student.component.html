@@ -1,1 +1,44 @@
-<p>student works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <h2 class="header center-block">Estudiantes</h2>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-primary">Nuevo Estudiante</button>
+            
+    
+        </div>
+    <div class="container center">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                  <th>#</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Fecha Nacimiento</th>
+                  <th scope="col">Edad</th>
+                  <th scope="col">Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let student of studentList;let indice=index">
+                    <td>{{indice+1}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.email}}</td>
+                    <td>{{student.birthDate}}</td>
+                    <td>{{student.age}}</td>
+                    <td>
+                        
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary" type="button">Editar</button>
+                            <button class="btn btn-danger" (click)="delete(student.id)" type="button">Eliminar</button>
+                          </div>
+                    </td>
+                </tr>
+              </tbody>
+          </table>
+    </div>
+
+    </div>
+    
+    
+
+</div>
