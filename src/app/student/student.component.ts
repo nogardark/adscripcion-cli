@@ -11,8 +11,7 @@ import Swal from 'sweetalert2';
 export class StudentComponent implements OnInit {
   columnsName: string[] = ['Id', '', 'Currency', 'Status', 'Options'];
   studentList: Student[] = [];
-  noFound = false;
-  private indice = 0;
+   
   constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {

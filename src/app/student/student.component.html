@@ -2,9 +2,7 @@
     <div class="row">
         <h2 class="header center-block">Estudiantes</h2>
         <div class="col-md-4">
-            <button type="button" class="btn btn-primary">Nuevo Estudiante</button>
-            
-    
+            <button type="button"  class="btn btn-primary" routerLink="/addStudent">Nuevo Estudiante</button>    
         </div>
     <div class="container center">
         <table class="table table-striped">
@@ -29,7 +27,7 @@
                         
                         <div class="d-grid gap-2 d-md-block">
                             <button class="btn btn-primary" type="button">Editar</button>
-                            <button class="btn btn-danger" (click)="delete(student.id)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</button>
+                            <button class="btn btn-danger" (click)="delete(student.id)">Eliminar</button>
                             
                           </div>
                           
