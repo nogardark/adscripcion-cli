@@ -6,10 +6,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class StudentService {
+ 
   private url = environment.resource;
   constructor(private http: HttpClient) { }
 
   getStudents(){
     return this.http.get(this.url+'students');
+  }
+  delete(studentId: number) {
+    return this.http.delete(this.url+'student/deleted/'+studentId);
   }
 }
