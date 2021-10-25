@@ -8,9 +8,11 @@ import { Student } from './Student';
 })
 export class StudentService {
   
+  
+  
  
   private url = environment.resource;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getStudents(){
     return this.http.get(this.url+'students');
@@ -20,5 +22,11 @@ export class StudentService {
   }
   save(student: Student) {
     return this.http.post(this.url+'student/save',student);
+  }
+  getStudent(id: Number) {
+    return this.http.get(this.url+'student/'+id);
+  }
+  update(studentId: Number, updateValues:any) {
+    return this.http.put(this.url+'student/update/'+studentId+'?name='+updateValues.name+'&email='+updateValues.email,null);    
   }
 }
