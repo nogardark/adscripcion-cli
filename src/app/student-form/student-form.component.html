@@ -1,0 +1,28 @@
+
+ <div class="container-fluid ">
+    <div class="text-center"><h2>Agregar Estudiante</h2></div>
+    <div class="continer">
+        <div class="form">
+            <form  [formGroup] = "formStudent" (ngSubmit)="onSubmit()" autocomplete="off">
+                <div class="mb-3">
+                    <label class="col-sm-4 col-form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="name" formControlName="name">
+                 </div>
+                 <div class="mb-3">
+                   <label for="" class="form-label">Email</label>
+                   <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email">
+
+                 </div>
+                 <div class="mb-3">
+                    <label class="col-sm-4 col-form-label">Fecha de Nacimiento:</label>               
+                    <input type="date" class="form-control" value="2017-06-01" formControlName="birthDate"/>               
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary m-2" [disabled]="formStudent.invalid" >Guardar</button>
+                    <button type="button" class="btn btn-secondary m-2" routerLink="/">Cancelar</button>
+                </div>
+            </form>
+            
+        </div>      
+   </div>
+ </div>
